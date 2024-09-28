@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
     <link rel="stylesheet" href="style.css">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -35,8 +32,8 @@
                 <p class="text-line">Whether you wish to discuss new ideas or have anything for me, <br> simply fill out this form and I’ll get back to you soon.</p>
             </div>
             
-            <!-- Contact Form -->
-            <form action="submit_form.php" method="post">
+            <!-- Contact Form using Formspree -->
+            <form action="https://formspree.io/f/myzgrjzw" method="POST">
                 <div class="form-group-row">
                     <div class="form-group">
                         <label for="first_name">First Name:</label>
@@ -53,15 +50,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="comments">What would you like to say ?</label>
+                    <label for="comments">What would you like to say?</label>
                     <textarea id="comments" name="comments" rows="4" required></textarea>
                 </div>
 
                 <button type="submit">Submit</button>
             </form>
         </section>
+
+        
     </main>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
