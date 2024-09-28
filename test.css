@@ -1,0 +1,101 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-image: url('akat.jpg'); 
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav .logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+.nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav .nav-links li {
+    margin: 0 120x;
+}
+
+.nav .nav-links a {
+    text-decoration: none;
+    color: #f56161;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav-links a i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.nav .nav-links a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Parallax section */
+.parallax {
+    background-image: url('Uchiha.jpg');
+    height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Content styles */
+.content {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(243, 215, 215, 0.8);
+    padding: 20px;
+}
+

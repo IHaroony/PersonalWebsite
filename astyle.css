@@ -1,0 +1,378 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Background */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('view-from-a-drone-above-the-ocean-shore-1920x1080_574865-mm-90.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #f0f4f7;
+}
+
+/* Logo styling */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation Styles */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 17px;
+    background-color: rgba(34, 61, 66, 0.5);
+    color: #ffffff;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Adjusted logo alignment */
+.nav .logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: fantasy;
+    margin-right: auto;
+}
+
+/* Adjusted navigation links alignment */
+.nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav .nav-links li {
+    margin: 0;
+}
+
+.nav .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav .nav-links a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(0, 123, 140, 0.4), rgba(0, 123, 140, 0.1));
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    border: 1px solid rgba(0, 123, 140, 0.3);
+}
+
+.nav .nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav .nav-links a:hover::before {
+    transform: translateX(0);
+}
+
+.nav .nav-links a:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .nav .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Main Content Padding */
+main {
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* About Section Styles */
+.about-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    background-color: rgba(34, 61, 66, 0.7); /* Maintain consistency with navbar */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #f0f4f7;
+    font-family: 'Segoe UI', sans-serif;
+}
+.cv-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007b8a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cv-download:hover {
+    background-color: #005a6b;
+    transform: scale(1.05);
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007b8a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+}
+
+.social-link i {
+    margin-right: 8px;
+}
+
+.social-link:hover {
+    background-color: #005a6b;
+    transform: scale(1.05);
+}
+
+
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Vertical line in Timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: rgb(255, 255, 255); /* Green vertical line */
+    border-radius: 100px;
+}
+
+
+#experience-heading {
+    font-size: 48px; /* Increased font size */
+    color: #ffffffec;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 600px;
+}
+
+
+/* Timeline item styling */
+.timeline-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.timeline-item:nth-child(odd) .flip-card {
+    margin-right: 50px; /* Move odd items to the left */
+}
+
+.timeline-item:nth-child(even) .flip-card {
+    margin-left: 50px; /* Move even items to the right */
+}
+
+.timeline-icon {
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Flip card container */
+.flip-card {
+    width: 320px;
+    height: 420px;
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.flip-card:hover {
+    transform: scale(1.05);
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Front and back of the card */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 4px;
+}
+
+.flip-card-front {
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-back {
+    background-color: #181515c4;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Character image */
+.character-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography improvements */
+.flip-card-front h3, .flip-card-back h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flip-card-front p, .flip-card-back p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.flip-card-front .date, .flip-card-back .date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+    }
+    .timeline-item:nth-child(odd) .flip-card,
+    .timeline-item:nth-child(even) .flip-card {
+        margin: 0;
+    }
+}

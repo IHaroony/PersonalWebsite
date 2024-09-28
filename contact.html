@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    
+</head>
+<body>
+    
+    <!-- Navigation Menu -->
+    <nav class="nav">
+        <div class="logo-container">
+            <img src="wlogo.png" alt="Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="contact">
+
+            <img src="wlp.avif" alt="Descriptive Alt Text" class="contact-image">
+
+            <div class="text-container1">
+                <p class="contactheading">Contact</p>
+                <p class="text-line1">Send me a message</p>
+                <p class="text-line">Whether you wish to discuss new ideas or have anything for me, <br> simply fill out this form and I’ll get back to you soon.</p>
+            </div>
+            
+            <!-- Contact Form -->
+            <form action="submit_form.php" method="post">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="second_name">Second Name:</label>
+                        <input type="text" id="second_name" name="second_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">What would you like to say ?</label>
+                    <textarea id="comments" name="comments" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
