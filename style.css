@@ -113,24 +113,47 @@ body {
     outline-offset: 2px;
 }
 
-
-@media (max-width: 768px) {
+/* Responsive navigation for tablets */
+@media (max-width: 1024px) {
     .nav {
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
+        padding: 15px;
     }
+
+    .nav .logo {
+        font-size: 40px;
+    }
+
     .nav .nav-links {
         flex-direction: column;
         width: 100%;
         padding: 0;
     }
-    .nav .nav-links li {
-        margin: 10px 0;
-    }
 }
 
+/* Responsive navigation for mobile */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
 
+    .nav .logo {
+        font-size: 35px;
+    }
+
+    .nav .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav .nav-links a {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
 
 /* Main Content Padding */
 main {
@@ -141,25 +164,24 @@ main {
     justify-content: center;
 }
 
-
 /* Home Page information */
 .heading {
     margin-bottom: 40px;
-    margin-left: 620px;
+    text-align: center;
     font-size: 30px;
     font-weight: italic;
     color: #eceb9e;
 }
 
 .Name {
-    margin-left: 620px;
+    text-align: center;
     font-size: 85px;
     color: #ffffff;
 }
 
 .intro {
     margin-top: 10px;
-    margin-left: 625px;
+    text-align: center;
     font-style: italic;
     color: #f3e5bf;
     font-size: 22px;
@@ -167,20 +189,37 @@ main {
 }
 
 .paragraph {
-    margin-left: 620px;
+    text-align: center;
     font-size: 24px;
     line-height: 1.6;
     margin-top: 10px;
     color: hsl(162, 67%, 88%);
 }
 
+/* Home Page - Adjustments for Mobile */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
 
+    .Name {
+        font-size: 60px;
+    }
 
+    .intro {
+        font-size: 18px;
+    }
 
+    .paragraph {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+}
 
 /* Content Sections */
 .section {
-    padding: 80px 20px;
+    padding: 40px 20px;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -206,33 +245,43 @@ main {
     border-radius: 10px;
 }
 
+/* Responsive adjustments for sections */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 15px;
+    }
+
+    .section h1 {
+        font-size: 28px;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+}
+
 /* Projects Section */
 .projects-section {
-    padding: 100px 50px;
+    padding: 100px 20px;
     color: #fff9f9;
     text-align: center;
-    margin-top: 90px;
     background-color: rgba(12, 12, 12, 0.719);
 }
 
 .projects-section h1 {
-    font-size: 66px;
-    margin-bottom: 200px;
+    font-size: 36px;
+    margin-bottom: 50px;
     color: #fcfbfbef;
-    margin-right: 2000px;
     font-family: 'Playfair Display';
     font-weight: 100;
-    
-
 }
 
-/* Grid layout with flexible card sizes */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted for smaller screens */
     grid-auto-rows: auto;
-    gap: 40px; /* Space between project cards */
-    max-width: 1400px;
+    gap: 40px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -246,14 +295,14 @@ main {
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Slight hover effect */
+    transform: scale(1.05);
 }
 
 .project-card img {
     width: 100%;
     border-radius: 8px;
-    max-height: 150px; /* Reduced image size */
-    object-fit: cover; /* Ensure image doesn't stretch */
+    max-height: 150px;
+    object-fit: cover;
 }
 
 .project-card h2 {
@@ -275,7 +324,6 @@ main {
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-    margin-top: auto;
 }
 
 .project-card .button:hover {
@@ -284,16 +332,37 @@ main {
 
 /* Custom size for specific cards */
 .project-card.wide {
-    grid-column: span 2; /* This will make the card take 2 columns */
+    grid-column: span 2;
 }
 
 .project-card.tall {
-    grid-row: span 2; /* This will make the card taller */
+    grid-row: span 2;
 }
 
+/* Adjustments for Projects on Mobile */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 50px 15px;
+    }
 
+    .projects-section h1 {
+        font-size: 28px;
+    }
 
-/* Scroll settings */
+    .project-card img {
+        max-height: 120px;
+    }
+
+    .project-card h2 {
+        font-size: 18px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+}
+
+/* Scroll to top button */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -319,8 +388,6 @@ main {
     transform: scale(1.1);
 }
 
-
-
 /* Contact Form Styles */
 form {
     max-width: 570px;
@@ -328,8 +395,6 @@ form {
     background: rgba(0, 0, 0, 0.616);
     padding: 50px;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-right: 600px;
 }
 
 form .form-group-row {
@@ -340,7 +405,7 @@ form .form-group-row {
 
 form .form-group {
     flex: 2;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -351,7 +416,8 @@ form label {
     color: #ffffff;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 11px;
     border: 3px solid #ffffff;
     border-radius: 15px;
@@ -379,43 +445,55 @@ form button:hover {
     font-family: monospace;
 }
 
+/* Responsive adjustments for form */
 @media (max-width: 768px) {
+    form {
+        padding: 30px 15px;
+        margin-right: 0;
+    }
+
     form .form-group-row {
         flex-direction: column;
         gap: 10px;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
     }
 }
 
 /* Contact Page Styles */
 .contactheading {
     margin-top: 350px;
-    margin-left: 715px;
+    margin-right: 700px;
+    text-align: center;
     font-size: 95px;
     color: #ffffff;
     margin-bottom: 20px;
-    font-family: 'Playfair Display'
+    font-family: 'Playfair Display';
 }
 
 .text-line {
     margin-top: 10px;
-    margin-left: 690px;
+    text-align: center;
     font-size: 21px;
     color: #ffffff;
     line-height: 1.6;
-    
 }
 
 .text-line1 {
-
     margin-top: 270px;
-    margin-left: 690px;
+    text-align: center;
     font-size: 56px;
     color: #ffffff;
     line-height: 1.6;
     font-family: 'Playfair Display';
-
 }
-
 
 .contact-image {
     width: 450px;
@@ -434,58 +512,54 @@ form button:hover {
     font-weight: 100;
     font-size: 55px;
     color: rgb(255, 248, 248);
-    animation: blink 1s step-end infinite; 
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
     from, to {
-        opacity: 1; 
+        opacity: 1;
     }
     50% {
-        opacity: 0; 
+        opacity: 0;
     }
 }
 
-
-
-
-/* Media query for tablets and small screens */
+/* Responsive Contact Page for Tablets */
 @media (max-width: 1024px) {
     .contactheading {
-        margin-top: 100px;
-        margin-left: 30px;
-        font-size: 22px;
+        font-size: 50px;
     }
 
     .text-line {
-        margin-top: 50px;
-        margin-left: 30px;
-        font-size: 15px;
+        font-size: 18px;
+    }
+
+    .contact-image {
+        right: 50px;
+        width: 250px;
+        height: 250px;
     }
 }
 
-/* Media query for mobile phones */
+/* Responsive Contact Page for Mobile */
 @media (max-width: 768px) {
     .contactheading {
-        margin-top: 80px;
-        margin-left: 50px;
-        font-size: 20px;
+        font-size: 40px;
+        margin-top: 100px;
     }
 
     .text-line {
-        margin-top: 80px;
-        margin-left: 50px;
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .text-line1 {
+        font-size: 30px;
+    }
+
+    .contact-image {
+        right: 0;
+        top: 100px;
+        width: 150px;
+        height: 150px;
     }
 }
-
-/* About and Contact Pages */
-.about, .contact {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-}
-
-
